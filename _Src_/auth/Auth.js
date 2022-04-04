@@ -3,7 +3,7 @@ import React, { createContext } from 'react';
 import { useState } from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
-import Grn_CheckingStack from '../navigation/Grn_CheckingStack';
+import Grn_CheckingStack from './../navigation/Grn_CheckerStack';
 import Grn_RackingStack from '../navigation/Grn_RackingStack';
 import Grn_MakerStack from '../navigation/MakerStack';
 import Grn_CheckerStack from '../navigation/CheckerStack';

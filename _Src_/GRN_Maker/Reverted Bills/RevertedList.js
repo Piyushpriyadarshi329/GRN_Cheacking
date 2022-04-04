@@ -19,13 +19,13 @@ const RevertedList = ({ navigation }) => {
 
     async function ApiCall() {
 
-        console.log("Api Data // getcounterbillall", "domairecno :", 508, "status :", "P")
+        console.log("Api Data // getcounterbillall", "domairecno :", 508, "status :", "R")
 
         setRefreshing(true);
 
         var sendapidata = {
             "domainrecno": 508,
-            "status": "RM"
+            "status": "R"
         }
 
         const FilterBillData = await axios.post(AppConstants.APIurl2 + 'getcounterbillall/', sendapidata);

@@ -104,6 +104,7 @@ const ShowItem = ({ route, navigation }) => {
           "mrp": itm.mrp,
         }
       ],
+           ...listHeader,
       "image": "",
       "custDescn": listHeader.custDescn,
       "creditallowed": listHeader.creditallowed,
@@ -116,7 +117,7 @@ const ShowItem = ({ route, navigation }) => {
       "billno": listHeader.billno,
       "lockedby": listHeader.lockedby,
       "lockedby": listHeader.lockedby,
-      "status": "O",
+      "status": "R",
       "message": listHeader.message,
       "makerdate": listHeader.makerdate,
       "makertime": listHeader.makertime,
@@ -152,7 +153,7 @@ const ShowItem = ({ route, navigation }) => {
       "tokenno": listHeader.tokenno,
       "domainposrecno": listHeader.domainposrecno,
       "domainrecno": listHeader.domainrecno,
-      "domainuserrecno": listHeader.domainuserrecno
+      "domainuserrecno": listHeader.domainuserrecno,
     }
 
     console.log('Resenddataapi----', senddataapi);
@@ -444,7 +445,6 @@ const ShowItem = ({ route, navigation }) => {
                           p[index].qty = text;
                           return [...p]
                         })
-                        console.log('p---------->', list)
                       }}
                       keyboardType='number-pad'
 
@@ -537,7 +537,6 @@ const ShowItem = ({ route, navigation }) => {
                       p[index].itembatchno = text;
                       return [...p]
                     })
-                    console.log('p---------->', list)
                   }}
                 />
               </View>

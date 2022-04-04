@@ -13,13 +13,13 @@ const Maker = ({ navigation }) => {
     }, [])
 
     const [filterBillDetails, setfilterBillDetails] = useState([])
-    const [refreshing, setRefreshing] = React.useState(false);
+    const [refreshing, setRefreshing] = useState(false);
 
     // Api Call
 
     async function ApiCall() {
 
-        console.log("Api Data // getcounterbillall", "domairecno :", 508, "status :", "P")
+        console.log("Api Data // getcounterbillall", "domairecno :", 508, "status :", "M")
 
         setRefreshing(true);
 
@@ -38,7 +38,6 @@ const Maker = ({ navigation }) => {
     // Formating Function For Date by DDMMYYYY
     const showDate_ddmmyy = (ab) => {
         let x = ab;
-        // console.log("sec", x);
         let dt = ""
         if (x != null) {
 
@@ -58,7 +57,6 @@ const Maker = ({ navigation }) => {
     }
 
     function renderItems({ item, index }) {
-        console.log("item----------------", item)
         return (
             <>
                 <View style={{ flex: 1, margin: "1%", marginVertical: '3%' }}>
@@ -120,7 +118,6 @@ const Maker = ({ navigation }) => {
                 data={filterBillDetails}
                 renderItem={renderItems}
                 showsVerticalScrollIndicator={true}
-                // onEndReached={onEndReachedHandler}
                 keyExtractor={(item) => item.recno.toString()}
                 refreshControl={<RefreshControl refreshing={refreshing} onRefresh={ApiCall} />}
             />
@@ -137,14 +134,12 @@ const styles = StyleSheet.create({
         flex: 0.3,
         justifyContent: 'space-evenly',
         marginVertical: '2%',
-
     },
     rows2: {
         flexDirection: "row",
         flex: 0.3,
         justifyContent: 'space-evenly',
         marginVertical: '2%',
-
     },
     content_text: {
         fontSize: 15,
@@ -157,16 +152,7 @@ const styles = StyleSheet.create({
         alignSelf: 'center',
         // height:'64%',
         borderRadius: 20,
-
     },
 })
 
 
-
-// <FlatList
-// data={categoryitems}
-// renderItem={renderItems}
-// showsVerticalScrollIndicator={true}
-// onEndReached={onEndReachedHandler}
-// keyExtractor={(item) => item.recno.toString()}
-// />
